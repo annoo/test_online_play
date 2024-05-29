@@ -36,16 +36,16 @@ document.addEventListener('keydown', (event) => {
     let movementData = { x: 0, y: 0 };
     switch (event.key) {
         case 'ArrowUp':
-            movementData.y = -5;
+            movementData.y = -8;
             break;
         case 'ArrowDown':
-            movementData.y = 5;
+            movementData.y = 8;
             break;
         case 'ArrowLeft':
-            movementData.x = -5;
+            movementData.x = -8;
             break;
         case 'ArrowRight':
-            movementData.x = 5;
+            movementData.x = 8;
             break;
     }
     socket.emit('playerMovement', movementData);
