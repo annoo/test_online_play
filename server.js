@@ -8,17 +8,27 @@ const io = socketIo(server);
 
 let players = {};
 const colors = ['red', 'orange', 'yellow', 'blue', 'bluegreen', 'purple'];
+const spawnPoints = [
+    { x: 100, y: 100 },
+    { x: 200, y: 100 },
+    { x: 300, y: 100 },
+    { x: 400, y: 100 },
+    { x: 500, y: 100 },
+    { x: 600, y: 100 },
+]
 
 app.use(express.static(__dirname + '/public'));
 
 io.on('connection', (socket) => {
     console.log('A user connected: ' + socket.id);
 
-    const playerColor = colors[Object.keys(players).length % colors.length]
+    const playerIndex = Object.keys(player).length %colors.length;
+    const playerColor = colors[playerIndex];
+    const spawnPoint = spawnPoints[playerIndex];
 
     players[socket.id] = {
-        x: Math.floor(Math.random() * 800),
-        y: Math.floor(Math.random() * 600),
+        x: spawnPoint.x,
+        y: spawnPoint.y,
         color: playerColor
     };
 
