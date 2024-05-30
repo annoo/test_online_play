@@ -1,13 +1,24 @@
 {
-    "name": "multiplayer-game",
-    "version": "1.0.0",
-    "description": "A simple multiplayer game",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "express": "^4.17.1",
-      "socket.io": "^4.0.1"
-    }
-  }
+  "name": "multiplayer-game",
+  "version": "1.0.0",
+  "description": "A simple multiplayer game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annoo/test_online_play.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annoo/test_online_play/issues"
+  },
+  "homepage": "https://github.com/annoo/test_online_play#readme"
+}
